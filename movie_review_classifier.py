@@ -24,8 +24,8 @@ tokenizer = Tokenizer(num_words=vocab_size)
 tokenizer.fit_on_texts(texts)
 sequences = tokenizer.texts_to_sequences(texts)
 
-model_pos_neg = load_model('pos_neg_checkpoint_best.h5') # загрузка весов модели для предсказания статуса  
-model_rank = load_model('rank_checkpoint_best.h5') # загрузка весов модели для предсказания рейтинга 
+model_pos_neg = load_model('pos_neg_checkpoint.h5') # загрузка весов модели для предсказания статуса  
+model_rank = load_model('rank_checkpoint.h5') # загрузка весов модели для предсказания рейтинга 
 
 # Функция predict_status_ranking принимает на вход отзыв, выводит статус отзыва и рейтинг
 def predict_status_ranking():
